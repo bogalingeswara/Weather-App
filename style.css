@@ -1,0 +1,217 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: cursive;
+        ;
+}
+
+:root {
+        --darkdark: rgb(40, 133, 164);
+        --dark: rgb(72, 228, 210);
+        --light: rgb(163, 255, 244);
+        --lightlight: rgba(245, 255, 255, 0.665);
+        --error: rgb(255, 116, 116);
+        --green: rgb(147, 241, 129);
+}
+
+body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light);
+}
+
+.wrapper {
+        background-color: var(--lightlight);
+        /* padding: 2rem; */
+        width: 400px;
+        border: 2px solid var(--darkdark);
+        border-radius: 1rem;
+}
+
+.wrapper header {
+        color: var(--darkdark);
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1.5rem 2rem;
+        border-bottom: 2px solid var(--darkdark);
+        display: flex;
+        align-items: center;
+}
+
+header i {
+        cursor: pointer;
+        font-size: 0rem;
+        margin-right: 1rem;
+}
+
+.wrapper.active header i {
+        margin-left: 5px;
+        font-size: 1.8rem;
+}
+
+.wrapper .input-part {
+        margin: 2rem;
+}
+
+.wrapper.active .input-part {
+        display: none;
+}
+
+.input-part .info-txt {
+        display: none;
+        font-size: 17px;
+        text-align: center;
+        padding: 12px 10px;
+        border-radius: .5rem;
+        color: var(--darkdark);
+}
+
+.info-txt.error {
+        display: block;
+        color: var(--lightlight);
+        background-color: var(--error);
+}
+
+.info-txt.pending {
+        display: block;
+        color: var(--lightlight);
+        background-color: var(--green);
+}
+
+.input-part input {
+        border: 2px solid var(--darkdark);
+        text-align: center;
+}
+
+.input-part button {
+        cursor: pointer;
+        background-color: var(--dark);
+        color: white;
+}
+
+.input-part button:hover{
+        background-color: var(--darkdark);
+}
+
+.input-part :where(input, button) {
+        font-size: 1rem;
+        width: 100%;
+        height: 3rem;
+        border: none;
+        outline: none;
+        padding: .5rem;
+        margin: 1rem 0rem;
+        border-radius: .5rem;
+}
+
+.input-part .separator {
+        height: 1px;
+        width: 100%;
+        margin: 25px 0px;
+        background-color: var(--darkdark);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+}
+
+.separator::before {
+        content: "or";
+        padding: 0 15px;
+        background-color: rgb(216, 253, 253);
+        color: var(--darkdark);
+        font-size: large;
+}
+
+.wrapper .weather-part {
+        margin: 30px 0 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.wrapper.active .weather-part {
+        display: flex;
+}
+
+.weather-part img {
+        max-width: 150px;
+}
+
+.weather-part .temp {
+        display: flex;
+        font-size: 60px;
+        font-weight: 500;
+}
+
+.weather-part .temp .numb {
+        font-weight: 600;
+}
+
+.weather-part .temp .deg {
+        font-size: 40px;
+        margin: 10px 5px 0 0;
+        display: block;
+}
+
+.weather-part .weather {
+        font-size: 21px;
+        text-align: center;
+        margin: -5px 20px 15px;
+}
+
+.weather-part .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        margin-bottom: 2rem;
+}
+
+.weather-part .location i {
+        font-size: 22px;
+        margin-right: 5px;
+}
+
+.weather-part .bottom-details {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 2px solid var(--darkdark);
+}
+
+.bottom-details .column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+}
+
+.bottom-details .column i {
+        color: var(--darkdark);
+        font-size: 2rem;
+        margin-right: 5px;
+}
+
+.bottom-details .humidity {
+        border-left: 2px solid var(--darkdark);
+}
+
+.details .temp,
+.humidity span {
+        font-size: 20px;
+        margin-top: -3px;
+}
+
+.details .temp .deg {
+        font-size: 20px;
+        margin: 0;
+        pad: 0px 2px 0px 1px;
+}
