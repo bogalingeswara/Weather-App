@@ -64,17 +64,17 @@ function weatherDetails(result) {
 
                 // changing the weather icons
                 if (id == 800) {
-                        wIcon.src = "weather-app-icons/Weather_icons/clear.svg"
+                        wIcon.src = "clear.svg"
                 } else if (id >= 200 && id <= 232) {
-                        wIcon.src = "weather-app-icons/Weather_icons/strom.svg"
+                        wIcon.src = "strom.svg"
                 } else if (id >= 600 && id <= 622) {
-                        wIcon.src = "weather-app-icons/Weather_icons/snow.svg"
+                        wIcon.src = "snow.svg"
                 } else if (id >= 701 && id <= 781) {
-                        wIcon.src = "weather-app-icons/Weather_icons/haze.svg"
+                        wIcon.src = "haze.svg"
                 } else if (id >= 801 && id <= 804) {
-                        wIcon.src = "weather-app-icons/Weather_icons/cloud.svg"
+                        wIcon.src = "cloud.svg"
                 } else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
-                        wIcon.src = "weather-app-icons/Weather_icons/rain.svg"
+                        wIcon.src = "rain.svg"
                 }
 
                 // changing the temp details
