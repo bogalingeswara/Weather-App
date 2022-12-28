@@ -26,7 +26,7 @@ body {
 .wrapper {
         background-color: var(--lightlight);
         /* padding: 2rem; */
-        width: 400px;
+        width: 350px;
         border: 2px solid var(--darkdark);
         border-radius: 1rem;
 }
